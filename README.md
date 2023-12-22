@@ -1,1 +1,0 @@
-# UzChipher-WinAPP
