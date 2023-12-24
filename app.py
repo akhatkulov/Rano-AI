@@ -34,10 +34,6 @@ def handle_request():
         return "No text provided"
 
 
-@app.route('/')
-def home_page():
-    return render_template('index.html')
-
 @app.route('/chat')
 def chat():
     return render_template('chat.html')
