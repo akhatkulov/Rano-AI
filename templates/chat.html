@@ -182,7 +182,7 @@
     </div>
     <div class="container">
         <div class="msg-row">
-            <p class="message">Salom! Sizga qanday yordam berishim mumkin?</p>
+            <p class="message">Assalomu alaykum! Namuna hodisa uchun sizga yordam bera olaman. Muammoni taqdim eting, men esa qonuniy yechim yoki kerakli chora-tadbirlarni tavsiya qilaman. Qanday huquq sohasi bo'yicha misol keltirmoqchisiz: fuqarolik, jinoyat, mehnat, yoki boshqa yo'nalishda?</p>
         </div>
 
     </div>
@@ -216,7 +216,7 @@
             e.target.children[0].disabled = true;
 
             window.scrollTo(0, window.innerHeight);
-            fetch('http://127.0.0.1:5000/api?text=' + data.value.trim(), {
+            fetch('http://127.0.0.1:1212/api?text=' + data.value.trim(), {
                 method: "GET",
             }
             ).then(res => {
