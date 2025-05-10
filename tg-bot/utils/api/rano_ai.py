@@ -1,5 +1,4 @@
 import httpx
-
 async def ask_rano(text: str) -> dict:
     url = f"https://api.u2s.uz/rano-ai?savol={text}"
     timeout = httpx.Timeout(15.0)  # 15 sekund kutadi

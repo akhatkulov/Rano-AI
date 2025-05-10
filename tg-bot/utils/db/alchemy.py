@@ -19,7 +19,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = "user"
+    __tablename__ = "user_rano_ai"
     id = Column(Integer, primary_key=True, autoincrement=True)
     cid = Column(BigInteger, unique=True)
     whois = Column(String, default="user")
@@ -28,7 +28,7 @@ class User(Base):
 
 
 class Channels(Base):
-    __tablename__ = "channels"
+    __tablename__ = "channels_rano_ai"
     id = Column(Integer, primary_key=True, autoincrement=True)
     cid = Column(String, default="None", unique=True)
 

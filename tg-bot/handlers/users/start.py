@@ -6,7 +6,7 @@ from states.test import UserState
 from aiogram.client.session.middlewares.request_logging import logger
 from loader import bot
 from utils.db.alchemy import create_user,get_info
-from keyboards.inline.phonenumber import send_number
+from keyboards.reply.phonenumber import send_number
 
 router = Router()
 
@@ -18,7 +18,7 @@ async def do_start(message: types.Message,state: FSMContext):
     username = message.from_user.username
     create_user(cid=message.chat.id)
     if get_info(cid=message.chat.id, type_data="phonenumber") != "null":
-        await message.answer(f"Assalomu alaykum <b> {full_name} </b>\nO'zbekiston qonunchiligiga oid qanday savolingiz bor? Men sizga yordam berishga tayyorman. Savolingizni aniqroq bersangiz, shuncha yaxshi javob bera olaman. 🙂")
+        await bot.send_photo(chat_id=message.chat.id,photo="https://t.me/the_solodest/178",caption=f"Assalomu alaykum <b> {full_name} </b>\nO'zbekiston qonunchiligiga oid qanday savolingiz bor? Men sizga yordam berishga tayyorman. Savolingizni aniqroq bersangiz, shuncha yaxshi javob bera olaman. 🙂")
     else:
         await message.answer(
                     "📱 Telefon raqamingizni kiriting", reply_markup=send_number()
