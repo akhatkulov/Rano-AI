@@ -33,7 +33,9 @@ server {
     }
 }
 ```
-
+```
+sudo ln -s /etc/nginx/sites-available/rano-ai.u2s.uz /etc/nginx/sites-enabled/
+```
 ```
 sudo nginx -t
 ```
